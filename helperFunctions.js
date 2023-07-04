@@ -14,7 +14,7 @@ export async function sendMail(id,email,token,res) {
       from: process.env.EMAIL,
       to: email,
       subject: 'Reset password link',
-      html: `https://password-reset-flow-react-node.netlify.app/reset/${id}/${token}`,
+      html: `https://master--password-reset-flow-react-node.netlify.app//reset/${id}/${token}`,
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
