@@ -94,7 +94,7 @@ router.get(`/resetpassword/auth/:id/:token`,async (req,res)=>{
         const user = await getUserById(id)
         if(token===user.passwordVerifyToken){
             res.status(200).send("user valid")
-           // await deleteTokenAfterVerification(id)
+           await deleteTokenAfterVerification(id)
         }else{
             res.status(203).send("user invalid")
         }
